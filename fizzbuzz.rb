@@ -1,14 +1,16 @@
+require 'colorize'
 class Fizzbuzz
-  a = (1..7)
-    (a).each do |n|
-      if ((n % 7) == 0) || (((n % 3) == 0)  && ((n % 5) == 0))
-        print "FizzBuzzSivv"
+    (1..100).each do |n|
+      if ((n % 7) == 0) && (((n % 3) == 0)  && ((n % 5) == 0))
+        puts "FizzBuzzSivv".colorize(:blue)
       elsif ((n % 3) == 0)  && ((n % 5) == 0)
-        print "FizzBuzz"
+        puts "FizzBuzz".colorize(:green)
       elsif (n % 3) == 0
-        print "Fizz"
+        puts "Fizz".colorize(:yellow)
       elsif (n % 5) == 0
-        print "Buzz"
+        puts "Buzz".colorize(:red)
+      elsif (n % 7) == 0
+        puts "FizzBuzzSivv".colorize(:orange)
       end
     end
 end
